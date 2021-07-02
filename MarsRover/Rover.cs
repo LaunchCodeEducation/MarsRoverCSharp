@@ -16,12 +16,5 @@ namespace MarsRover
             return "Position: " + Position + " - Mode: " + Mode + " - GeneratorWatts: " + GeneratorWatts; 
         }
 
-        // UNCOMMENT when you reach the Rover tests //
-        //public Response ReceiveMessage(Message message)
-        //{
-        //    Response newResponse;
-
-        //    return newResponse;
-        //}
     }
 }
