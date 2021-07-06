@@ -5,9 +5,25 @@ namespace MarsRover
     {
         public string Name { get; set; }
         public Command[] Commands { get; set; }
-
-        public Message(string name, Command[] commands)
+        public Message(string name)
         {
+            Name = name;
+            if (String.IsNullOrEmpty(name))
+            {
+                throw new ArgumentNullException(name, "Name required.");
+            }
+        }
+
+        public Message(string name, Command[] commands )
+        {
+            Name = name;
+            if (String.IsNullOrEmpty(name))
+            {
+                throw new ArgumentNullException(name, "Name required.");
+            }
+            Command[] newCommand = new Command[] {new Command(commands)};
+            
+
         }
     }
 }
