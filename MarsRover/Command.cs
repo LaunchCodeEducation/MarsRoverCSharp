@@ -27,6 +27,7 @@ namespace MarsRover
                 throw new ArgumentNullException(commandType, "Command type required.");
             }
             NewPosition = value;
+
         }
         public Command(string commandType, string newMode)
         {
