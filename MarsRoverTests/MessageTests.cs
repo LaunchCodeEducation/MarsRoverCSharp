@@ -32,8 +32,10 @@ namespace MarsRoverTests
         [TestMethod]
         public void ConstructorSetsCommandsField()
         {
-            Command[] commands = { new Command("MODE_CHANGE", "LOW_POWER"), new Command("MOVE", 500)};
-            Assert.AreEqual(commands.Commands, 20);
+            Command[] commands = { new Command("MODE_CHANGE", "LOW_POWER"), new Command("MOVE", 500) };
+            Message newMessage = new Message("MOVING 500",commands);
+            
+            Assert.AreEqual(newMessage.Commands,commands);
         }
     }
 }

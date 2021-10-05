@@ -21,9 +21,7 @@ namespace MarsRover
             {
                 throw new ArgumentNullException(name, "Name required.");
             }
-            Command[] newCommand = new Command[] {new Command(commands)};
-            
-
+            Commands = commands;
         }
     }
 }
